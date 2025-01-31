@@ -6,6 +6,8 @@ body {
     transition: 0.3s;
     padding-left: 20%;
     padding-right: 20%;
+    font-size: 1rem;
+    font-family: 'Pacifo';
 }
 
 .hero {
@@ -17,6 +19,8 @@ body {
 
 h2 {
     align-content: center;
+    text-decoration: underline;
+    text-decoration-thickness: double 2px;
 }
 
 .profile-img {
@@ -30,6 +34,11 @@ h2 {
     font-size: 2rem;
     margin: 0;
     color: #f5f5dc;
+    font-family: 'Times New Roman', Times, serif
+}
+
+h3 {
+    color: #d2691e;
 }
 
 .about {
@@ -67,6 +76,8 @@ h2 {
     color: #f5f5dc;
     padding: 10px;
     background: #290916;
+    border: #d2691e;
+    border-radius: 10px;
 }
 
 .project {
@@ -77,8 +88,17 @@ h2 {
     text-align: center;
 }
 
-.project:hover {
+.about:hover {
     transform: scale(1.05);
+    background-color: #f5f5dc;
+}
+
+.project:hover, .skills:hover, .experience:hover {
+    transform: scale(1.05);
+    border: #f5f5dc;
+    background-color: #d2691e;
+    font-weight: 600;
+    color: #333;
 }
 
 .project img {
@@ -92,7 +112,7 @@ h2 {
     display: block;
     font-weight: bold;
     text-decoration: none;
-    color: #d2691e;
+    color: #290916;
     margin-top: 10px;
     font-size: 18px;
 }
@@ -118,6 +138,10 @@ section {
 
 
 @media only screen and (max-width:700px) {
+    body{
+        width: 100%;
+        padding: 0;
+    }
     .portfolio .gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -127,5 +151,13 @@ section {
     .talent {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .portfolio .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 }
